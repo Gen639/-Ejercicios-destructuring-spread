@@ -60,9 +60,7 @@ console.log(sumAllNumbers(11, 3, 12));
 
 function addOnlyNums(...arguments) {
   let count = 0;
-  argumentsArray = Array.from(arguments);
-
-  argumentsArray.forEach((element) => {
+  arguments.forEach((element) => {
     if (typeof element === "number") {
       count += element;
     }
@@ -72,8 +70,7 @@ function addOnlyNums(...arguments) {
 console.log(addOnlyNums(1, "perro", 2, 4));
 
 function countTheArgs(...arguments) {
-  argumentsArray = Array.from(arguments);
-  return argumentsArray.length;
+  return arguments.length;
 }
 console.log(countTheArgs("gato", "perro"));
 console.log(countTheArgs("gato", "perro", "pollo", "oso"));
